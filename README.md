@@ -14,6 +14,10 @@ passed through an editorial gate before publication.
 https://www.ddmarketer.com/api/mcp
 ```
 
+## Listed on
+
+- **[Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ddmarketer)** — `io.github.CodePhantom-1/ddmarketer-mcp`
+
 ## Install
 
 **Claude Code**
