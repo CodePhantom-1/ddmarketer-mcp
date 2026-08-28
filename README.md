@@ -17,6 +17,7 @@ https://www.ddmarketer.com/api/mcp
 ## Listed on
 
 - **[Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ddmarketer)** — `io.github.CodePhantom-1/ddmarketer-mcp`
+- **[Glama](https://glama.ai/mcp/connectors/io.github.CodePhantom-1/ddmarketer-mcp)** — Healthy, tool definition quality 4.3/5.0
 
 ## Install
 
