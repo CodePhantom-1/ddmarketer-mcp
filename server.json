@@ -3,7 +3,7 @@
   "name": "io.github.CodePhantom-1/ddmarketer-mcp",
   "title": "DDMarketer",
   "description": "Validated SaaS opportunities mined from real user complaints across 8 sources.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://www.ddmarketer.com/mcp",
   "repository": {
     "url": "https://github.com/CodePhantom-1/ddmarketer-mcp",
@@ -13,6 +13,15 @@
     {
       "type": "streamable-http",
       "url": "https://www.ddmarketer.com/api/mcp"
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://www.ddmarketer.com/icon",
+      "mimeType": "image/png",
+      "sizes": [
+        "32x32"
+      ]
     }
   ]
 }
