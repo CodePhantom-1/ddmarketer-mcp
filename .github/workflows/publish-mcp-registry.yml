@@ -1,0 +1,36 @@
+# Publishes server.json to the official MCP Registry.
+#
+# Uses GitHub OIDC rather than `mcp-publisher login github`: the interactive
+# device flow needs a human to paste a code inside ~15 minutes, and the -token
+# alternative means handing a broadly-scoped PAT to a third party. OIDC
+# authenticates as this repository, so the io.github.CodePhantom-1/* namespace
+# is granted from the repo owner with no stored secret at all.
+name: Publish to MCP Registry
+
+on:
+  push:
+    branches: [master]
+    paths: ["server.json"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install mcp-publisher
+        run: |
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz" | tar xz mcp-publisher
+
+      - name: Validate server.json
+        run: ./mcp-publisher validate
+
+      - name: Authenticate via OIDC
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish
+        run: ./mcp-publisher publish
