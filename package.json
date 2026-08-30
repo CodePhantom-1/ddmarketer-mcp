@@ -1,0 +1,28 @@
+{
+  "name": "ddmarketer-mcp-client",
+  "version": "1.0.0",
+  "description": "Minimal reference client for the DDMarketer MCP server. Connects over Streamable HTTP, lists tools, and runs the three open tools with no API key.",
+  "type": "module",
+  "bin": {
+    "ddmarketer-mcp-demo": "src/cli.js"
+  },
+  "scripts": {
+    "demo": "node src/cli.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodePhantom-1/ddmarketer-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-client",
+    "mcp-server",
+    "market-research"
+  ]
+}

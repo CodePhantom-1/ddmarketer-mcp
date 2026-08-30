@@ -19,7 +19,41 @@ https://www.ddmarketer.com/api/mcp
 - **[Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ddmarketer)** — `io.github.CodePhantom-1/ddmarketer-mcp`
 - **[Glama](https://glama.ai/mcp/connectors/io.github.CodePhantom-1/ddmarketer-mcp)** — Healthy, tool definition quality 4.3/5.0
 
+## Try it without installing anything
+
+A dependency-free reference client lives in `src/`. It connects over Streamable
+HTTP, lists the tools, and runs the three that need no API key:
+
+```bash
+git clone https://github.com/CodePhantom-1/ddmarketer-mcp
+cd ddmarketer-mcp
+node src/cli.js                       # or: node src/cli.js "shopify accounting"
+```
+
+```
+== handshake
+  ddmarketer v1.0.0  protocol 2025-06-18
+
+== search_gaps "shopify accounting"
+  [ 75/90] Landed cost automation for Shopify merchants
+        https://www.ddmarketer.com/detail/63ac4735-...
+
+== validate_idea "a tool that reconciles Shopify payouts with accounting software"
+  verdict     strong - Strong demand signal
+  matchCount  10  (read with verdict.level, not alone)
+```
+
+`src/client.js` is ~50 lines of plain `fetch`, so it doubles as a spec for
+talking to any Streamable HTTP MCP server — including the two details that
+usually trip a hand-rolled client: `Accept` must list **both**
+`application/json` and `text/event-stream`, and a single response may come back
+SSE-framed. Both are handled and covered by tests.
+
+`npm test` runs offline (9 tests, no dependencies). `LIVE=1 npm test` also hits
+the real server.
+
 ## Install
+
 
 **Claude Code**
 
