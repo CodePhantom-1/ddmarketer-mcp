@@ -23,6 +23,12 @@
     "model-context-protocol",
     "mcp-client",
     "mcp-server",
-    "market-research"
+    "market-research",
+    "startup-ideas",
+    "saas-ideas",
+    "idea-validation",
+    "demand-validation",
+    "pain-points",
+    "product-research"
   ]
 }

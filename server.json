@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.CodePhantom-1/ddmarketer-mcp",
   "title": "DDMarketer",
-  "description": "Validated SaaS opportunities mined from real user complaints across 8 sources.",
-  "version": "1.0.2",
+  "description": "Find and validate SaaS ideas from real user complaints, scored for commercial intent.",
+  "version": "1.0.3",
   "websiteUrl": "https://www.ddmarketer.com/mcp",
   "repository": {
     "url": "https://github.com/CodePhantom-1/ddmarketer-mcp",

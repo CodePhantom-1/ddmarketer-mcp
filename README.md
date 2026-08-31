@@ -1,6 +1,6 @@
 # DDMarketer MCP Server
 
-Validated SaaS opportunities, mined from real user complaints, inside your coding agent.
+Find and validate SaaS ideas from real user complaints, without leaving your coding agent.
 
 Your agent can already build almost anything. The hard part is knowing what is worth building.
 This is a remote [Model Context Protocol](https://modelcontextprotocol.io) server that answers
